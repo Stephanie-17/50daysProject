@@ -1,0 +1,103 @@
+body{
+    display: flex;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    
+}
+.landing-page1{
+    background-image: url(/Split-Landing-Page/assets/playstation5.jpg);
+    background-color: rgba(0, 0, 255, 0.449);
+    background-blend-mode: multiply;
+    flex-basis: 100%;
+    transition: flex-basis 0.7s ease-in-out;
+    
+}
+.landing-page2{
+    background-image: url(/Split-Landing-Page/assets/xbox.jpg);
+   ;
+   background-color: rgba(43, 43, 43, 0.8);
+    background-blend-mode: multiply;
+      flex-basis: 100%;
+    transition: flex-basis 0.7s ease-in-out;
+   
+}
+.landing-page1,.landing-page2{
+ 
+    background-size: cover;
+    width: 100%;
+    height: 100vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+     
+}
+h1{
+    font-size: 60px;
+}
+button{
+    width: 250px;
+    height: 70px;
+    background-color: transparent;
+    border: 5px white solid;
+    font-size: 17px;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+}
+.landing-page1 button:hover{
+   background-color: rgba(76, 0, 255,1);
+   border:rgba(76, 0, 255, 0.514) 5px solid ;
+}
+
+.landing-page2 button:hover{
+   background-color: rgb(6, 73, 3);
+   border:rgba(6,73,3) 5px solid ;
+}
+.landing-page1:hover{
+    flex-basis: 280%;
+}
+.landing-page2:hover{
+    flex-basis: 280%;
+
+}
+
+.active-page{
+    /* animation-name: big;
+    animation-duration: 0.7s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease; */
+
+    /* flex-basis: 280%; */
+}
+.remove-active{
+flex-basis: 100%;
+}
+
+@keyframes big {
+    0%{
+        flex-basis: 100%;
+    }
+    15%{
+        flex-basis: 125%;
+    }
+    25%{
+        flex-basis: 150%;
+    }
+    40%{
+        flex-basis: 175%;
+    }
+    50%{
+        flex-basis: 200%;
+    }
+    65%{
+        flex-basis: 225%;
+    }
+    75%{
+        flex-basis: 250% ;
+    }
+    100%{
+        flex-basis: 280%;
+    }
+}
