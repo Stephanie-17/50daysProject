@@ -1,0 +1,57 @@
+.input-container {
+  position: relative;
+  margin: 30px;
+}
+
+input {
+  padding: 10px;
+  width: 200px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.placeholder {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  color: #999;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  display: flex;
+}
+
+.letter {
+  display: inline-block;
+  transition: transform 0.3s ease;
+  transform: translateY(0);
+}
+
+input:focus + .placeholder .letter {
+  animation: letterLift 0.4s ease forwards;
+}
+
+input:focus + .placeholder {
+  top: -20px;
+  left: 5px;
+  font-size: 12px;
+  color: #3498db;
+}
+
+/* Individual letter animations with delays */
+input:focus + .placeholder .letter:nth-child(1) { animation-delay: 0s; }
+input:focus + .placeholder .letter:nth-child(2) { animation-delay: 0.05s; }
+input:focus + .placeholder .letter:nth-child(3) { animation-delay: 0.1s; }
+input:focus + .placeholder .letter:nth-child(4) { animation-delay: 0.15s; }
+input:focus + .placeholder .letter:nth-child(5) { animation-delay: 0.2s; }
+
+@keyframes letterLift {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
